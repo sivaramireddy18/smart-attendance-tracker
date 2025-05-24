@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Find Nearby Check-ins</h2>
+<form method="post">
+  Lat: <input name="lat">  
+  Lon: <input name="lon">  
+  Radius (m): <input name="radius">  
+  <button>Search</button>
+</form>
+<ul>
+  {% for emp, time, loc, dist in results %}
+    <li>{{ emp }} at {{ time }} → {{ loc }} | {{ dist }} m away</li>
+  {% endfor %}
+</ul>
+{% endblock %}

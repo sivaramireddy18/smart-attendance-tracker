@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add Check-in</h2>
+<form method="post">
+  ID: <input name="emp_id"><br>
+  Time: <input name="time_str" value="2025-05-23 09:00"><br>
+  Lat: <input name="lat"><br>
+  Lon: <input name="lon"><br>
+  <button>Add</button>
+</form>
+{% endblock %}

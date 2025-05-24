@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Summary</h2>
+<ul>
+  {% for emp, count in summary.items() %}
+    <li><a href="/employee/{{ emp }}">{{ emp }}</a>: {{ count }} check-ins</li>
+  {% endfor %}
+</ul>
+{% endblock %}

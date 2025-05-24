@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Check-ins for {{ emp_id }}</h2>
+<ul>
+  {% for emp, time, loc in records %}
+    <li>{{ time }} → {{ loc }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
